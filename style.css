@@ -195,14 +195,17 @@ body{
     width: max-content;
 }
 
-#formlist {
+#formlist, #formlist-action,#formlist-sport,#formlist-adventure {
     max-width: 100%;
     overflow: auto;
     margin: 30px 0;
     scroll-behavior: smooth;
 }
 
-#formlist::-webkit-scrollbar {
+#formlist::-webkit-scrollbar,
+#formlist-action::-webkit-scrollbar,
+#formlist-sport::-webkit-scrollbar,
+#formlist-adventure::-webkit-scrollbar{
     display: none;
 }
 

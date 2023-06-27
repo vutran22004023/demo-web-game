@@ -102,3 +102,56 @@ var adventure = [
         image:"https://cdn.akamai.steamstatic.com/steam/apps/306130/hero_capsule.jpg?t=1685974187"										                                   
     },
 ]
+
+
+function listProduct () {
+    for(var i=0; i<=free.length-1; i++) {
+        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
+        demo += '<img class="card-img-top" src="'+free[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
+        demo += '<div class="card-body">';
+        demo += '<h5 class="card-title" style= "margin: 20px 0">'+free[i].name+'</h5>';
+        demo += '<a href="#" class="btn btn-primary" style= "padding: 20px">Go somewhere</a>';
+        demo += '</div>';
+        demo += '</div>';
+        
+        document.getElementById("game-free").innerHTML += demo;
+    }
+
+    for(var i=0; i<=action.length-1; i++) {
+        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
+        demo += '<img class="card-img-top" src="'+action[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
+        demo += '<div class="card-body">';
+        demo += '<h5 class="card-title" style= "margin: 20px 0">'+action[i].name+'</h5>';
+        demo += '<a href="#" class="btn btn-primary" style= "padding: 20px">Go somewhere</a>';
+        demo += '</div>';
+        demo += '</div>';
+        
+        document.getElementById("game-action").innerHTML += demo;
+    }
+
+    for(var i=0; i<=sport.length-1; i++) {
+        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
+        demo += '<img class="card-img-top" src="'+sport[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
+        demo += '<div class="card-body">';
+        demo += '<h5 class="card-title" style= "margin: 20px 0">'+sport[i].name+'</h5>';
+        demo += '<a href="#" class="btn btn-primary" style= "padding: 20px">Go somewhere</a>';
+        demo += '</div>';
+        demo += '</div>';
+        
+        document.getElementById("game-sport").innerHTML += demo;
+    }
+
+    
+
+    for(var i=0; i<=adventure.length-1; i++) {
+        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
+        demo += '<img class="card-img-top" src="'+adventure[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
+        demo += '<div class="card-body">';
+        demo += '<h5 class="card-title" style= "margin: 20px 0">'+adventure[i].name+'</h5>';
+        demo += '<a href="#" class="btn btn-primary" style= "padding: 20px">Go somewhere</a>';
+        demo += '</div>';
+        demo += '</div>';
+        
+        document.getElementById("game-adventure").innerHTML += demo;
+    }
+}

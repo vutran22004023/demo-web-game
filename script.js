@@ -40,4 +40,3 @@ document.getElementById('prev-adventure').onclick = function () {
     const widthitem = document.querySelector('.item').offsetWidth;
     document.getElementById('formlist-adventure').scrollLeft -=  widthitem;
 }
-

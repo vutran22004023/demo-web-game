@@ -107,57 +107,7 @@ var adventure = [
 
 
 function listProduct () {
-    
-    for(var i=0; i<=free.length-1; i++) {
-        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
-        demo += '<img class="card-img-top" src="'+free[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
-        demo += '<div class="card-body">';
-        demo += '<h5 class="card-title" style= "margin: 20px 0">'+free[i].name+'</h5>';
-        demo += '<button class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>';
-        demo += '</div>';
-        demo += '</div>';
-        document.getElementById("game-free").innerHTML += demo;
-        
-    }
-
-    for(var i=0; i<=action.length-1; i++) {
-        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
-        demo += '<img class="card-img-top" src="'+action[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
-        demo += '<div class="card-body">';
-        demo += '<h5 class="card-title" style= "margin: 20px 0">'+action[i].name+'</h5>';
-        demo += '<button class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>';
-        demo += '</div>';
-        demo += '</div>';
-        const detailBtns =document.querySelectorAll('.js-detail');
-        document.getElementById("game-action").innerHTML += demo;
-    }
-
-    for(var i=0; i<=sport.length-1; i++) {
-        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
-        demo += '<img class="card-img-top" src="'+sport[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
-        demo += '<div class="card-body">';
-        demo += '<h5 class="card-title" style= "margin: 20px 0">'+sport[i].name+'</h5>';
-        demo += '<button class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>';
-        demo += '</div>';
-        demo += '</div>';
-        document.getElementById("game-sport").innerHTML += demo;
-    }
-
-    
-
-    for(var i=0; i<=adventure.length-1; i++) {
-        var demo = '<div class="item" style="width: 25%;margin-right: 50px;border: none; background-color: rgb(182, 184, 186); padding: 30px 20px; border-radius: 20px;">';
-        demo += '<img class="card-img-top" src="'+adventure[i].image+'" alt="Card image cap" style= " border-radius: 20px; width:  250px;">';
-        demo += '<div class="card-body">';
-        demo += '<h5 class="card-title" style= "margin: 20px 0">'+adventure[i].name+'</h5>';
-        demo += '<button class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>';
-        demo += '</div>';
-        demo += '</div>';
-        
-        document.getElementById("game-adventure").innerHTML += demo;
-    }
-
-    
+ 
 const detailBtns =document.querySelectorAll('.js-detail');
 const modal = document.querySelector('.js-modal');
 const modalContainer =document.querySelector('.js-modal-container');
@@ -182,4 +132,251 @@ modal.addEventListener('click', hideTableDetail)
 modalContainer.addEventListener('click', function(event) {
     event.stopPropagation()
 })
+}
+
+let listCards = [];
+let listCards1 = [];
+let listCards2 = [];
+let listCards3 = [];
+let freeGame = document.getElementById('game-free');
+let gameAction = document.getElementById('game-action');
+let gameSport = document.getElementById('game-sport');
+let gameAdventure = document.getElementById('game-adventure');
+let modalBody = document.querySelector('.modal-body');
+
+
+// game free
+function initGamefree  () {
+    free.forEach((value, key) => {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <div class="item-block" style="">
+            <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
+            <div class="card-body">
+                <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
+                <button onclick= "addToCard(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+            </div>
+        </div>
+        `;
+        freeGame.appendChild(newDiv);
+    });
+}
+
+initGamefree();
+
+// game action
+function initGameAction  () {
+    action.forEach((value, key) => {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <div class="item-block" style="">
+            <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
+            <div class="card-body">
+                <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
+                <button onclick= "addToCard1(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+            </div>
+        </div>
+        `;
+        gameAction.appendChild(newDiv);
+    });
+}
+
+initGameAction();
+
+// game sport
+function initGameSport  () {
+    sport.forEach((value, key) => {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <div class="item-block" style="">
+            <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
+            <div class="card-body">
+                <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
+                <button onclick= "addToCard2(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+            </div>
+        </div>
+        `;
+        gameSport.appendChild(newDiv);
+    });
+}
+
+initGameSport();
+
+// game Adventure
+function initGameAdventure  () {
+    adventure.forEach((value, key) => {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <div class="item-block" style="">
+            <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
+            <div class="card-body">
+                <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
+                <button onclick= "addToCard3(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+            </div>
+        </div>
+        `;
+        gameAdventure.appendChild(newDiv);
+    });
+}
+
+initGameAdventure();
+
+
+
+
+
+function addToCard(key){
+    if(listCards[key] == null){
+        listCards[key] = free[key];
+        reloadCard();
+    }
+
+    delete listCards[key];
+}
+
+function addToCard1(key){
+    if(listCards1[key] == null){
+        listCards1[key] = action[key];
+        reloadCard1();
+    }
+
+    delete listCards1[key];
+}
+
+function addToCard2(key){
+    if(listCards2[key] == null){
+        listCards2[key] = sport[key];
+        reloadCard2();
+    }
+
+    delete listCards2[key];
+}
+
+function addToCard3(key){
+    if(listCards3[key] == null){
+        listCards3[key] = adventure[key];
+        reloadCard3();
+    }
+
+    delete listCards3[key];
+}
+
+
+
+
+function reloadCard(){
+    modalBody.innerHTML = '';
+    listCards.forEach((value, key)=>{
+        
+        if(value != null){
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('modal-body-1');
+            newDiv.innerHTML = `
+
+            <div class="modal-table-1" style="margin-right: 30px;">
+            <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
+            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
+          </div>
+
+          <div class="modal-tabel-2">
+            <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
+            <div style=" overflow-y: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+            </div>
+          </div>
+            `;
+            modalBody.appendChild(newDiv);
+        }
+    })
+}
+
+function reloadCard1(){
+    modalBody.innerHTML = '';
+    listCards1.forEach((value, key)=>{
+        
+        if(value != null){
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('modal-body-1');
+            newDiv.innerHTML = `
+            <div class="modal-table-1" style="margin-right: 30px;">
+            <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
+            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
+          </div>
+
+          <div class="modal-tabel-2">
+            <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
+            <div style=" overflow-y: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+            </div>
+          </div>
+            `;
+            modalBody.appendChild(newDiv);
+        }
+    })
+}
+
+function reloadCard2(){
+    modalBody.innerHTML = '';
+    listCards2.forEach((value, key)=>{
+        
+        if(value != null){
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('modal-body-1');
+            newDiv.innerHTML = `
+            <div class="modal-table-1" style="margin-right: 30px;">
+            <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
+            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
+          </div>
+
+          <div class="modal-tabel-2">
+            <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
+            <div style=" overflow-y: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+            </div>
+          </div>
+            `;
+            modalBody.appendChild(newDiv);
+        }
+    })
+}
+
+function reloadCard3(){
+    modalBody.innerHTML = '';
+    listCards3.forEach((value, key)=>{
+        
+        if(value != null){
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('modal-body-1');
+            newDiv.innerHTML = `
+            <div class="modal-table-1" style="margin-right: 30px;">
+            <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
+            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
+          </div>
+
+          <div class="modal-tabel-2">
+            <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
+            <div style=" overflow-y: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+              adasdasdasdasdasadasdasdasdasdasadasdasdasdasdas
+            </div>
+          </div>
+            `;
+            modalBody.appendChild(newDiv);
+        }
+    })
 }

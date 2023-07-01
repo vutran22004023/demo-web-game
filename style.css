@@ -51,6 +51,7 @@ body{
 .navigation-item li  {
     margin-top: 15px;
     text-decoration: none;
+    list-style: none;
 }
 
 

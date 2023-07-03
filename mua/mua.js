@@ -16,6 +16,54 @@ closeShopping.addEventListener('click', () => {
 
 var products = [
     {											
+        id: 1 ,										
+        name: "Summoners War: Chronicles",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/2167580/hero_capsule.jpg?t=1684992880"										                                 
+    },											
+    {											
+        id: 2 ,										
+        name: "Counter-Strike: Global Offensive",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/730/hero_capsule.jpg?t=1683566799"										
+    },											
+    {											
+        id: 3 ,										
+        name: "World of Warships",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/552990/hero_capsule_alt_assets_3.jpg?t=1687507851"										                                      
+    },											
+    {											
+        id: 4 ,										
+        name: "PUBG: BATTLEGROUNDS",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/578080/hero_capsule.jpg?t=1684838697"										                                   
+    },
+    {											
+        id: 5 ,										
+        name: "Call of duty",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1938090/hero_capsule.jpg?t=1687571108"										                                 
+    },											
+    {											
+        id: 6 ,										
+        name: "BattleBit Remastered",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/671860/hero_capsule.jpg?t=1686877598"										
+    },											
+    {											
+        id: 7 ,										
+        name: "Grand Theft Auto V",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/271590/hero_capsule.jpg?t=1678296348"										                                      
+    },											
+    {											
+        id: 8 ,										
+        name: "Six Days in Fallujah",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1548850/hero_capsule.jpg?t=1687576255"										                                   
+    },
+    {											
         id: 9 ,										
         name: "Pro Soccer Online",																				
         price :120000,										

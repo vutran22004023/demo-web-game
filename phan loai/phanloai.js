@@ -293,15 +293,15 @@ function reloadCard(){
             newDiv.classList.add('modal-body-1');
             newDiv.innerHTML = `
 
-            <div class="modal-table-1" style="margin-right: 30px;">
+            <div class="modal-table-1" style="margin-right: 30px; ">
             <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
-            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <div style="margin: 10px; font-size: 20px;;" class="price">Giá: ${value.price.toLocaleString()}</div>
             <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
           </div>
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
               ${value.content}
             </div>
           </div>
@@ -321,13 +321,13 @@ function reloadCard1(){
             newDiv.innerHTML = `
             <div class="modal-table-1" style="margin-right: 30px;">
             <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
-            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <div style="margin: 10px; font-size: 20px;;" class="price">Giá: ${value.price.toLocaleString()}đ</div>
             <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
           </div>
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
                 ${value.content}
             </div>
           </div>
@@ -347,13 +347,13 @@ function reloadCard2(){
             newDiv.innerHTML = `
             <div class="modal-table-1" style="margin-right: 30px;">
             <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
-            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <div style="margin: 10px; font-size: 20px;;" class="price">Giá: ${value.price.toLocaleString()}đ</div>
             <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
           </div>
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
                 ${value.content}
             </div>
           </div>
@@ -373,13 +373,13 @@ function reloadCard3(){
             newDiv.innerHTML = `
             <div class="modal-table-1" style="margin-right: 30px;">
             <img style="width: 250px; height: 300px; border-radius: 20px;" src="${value.image}" alt="">
-            <div style="margin: 10px; font-size: 20px;;" class="price">${value.price.toLocaleString()}đ</div>
+            <div style="margin: 10px; font-size: 20px;;" class="price">Giá: ${value.price.toLocaleString()}đ</div>
             <button style="padding: 20px 70px; margin-left: 10px; border-radius: 8px; background-color: rgb(234, 55, 55); color: #fff;" class="button-buy">Mua</button>
           </div>
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; border: 1px solid #000; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
                 ${value.content}
             </div>
           </div>
@@ -388,3 +388,4 @@ function reloadCard3(){
         }
     })
 }
+

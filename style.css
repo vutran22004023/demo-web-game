@@ -10,14 +10,14 @@ body{
 
 .carousel-caption h2 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 100px;
+    font-size: 80px;
 }
 .carousel-caption button {
-    margin-bottom: 100px;
-    padding: 30px 60px;
+    margin-bottom: 50px;
+    padding: 30px 55px;
     margin-top: 10px;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 20px;
     font-family:'Times New Roman', Times, serif;
     border: 1px solid #ff0000;
 }
@@ -51,6 +51,7 @@ body{
 .navigation-item li  {
     margin-top: 15px;
     text-decoration: none;
+    list-style: none;
 }
 
 
@@ -99,6 +100,7 @@ body{
     margin-left: 40px;
     margin-right: 50px;
     transition: .5s;
+    padding-right: 50px;
 }
 .navigation .buttonLogin:hover {
     background: #fff;
@@ -195,14 +197,17 @@ body{
     width: max-content;
 }
 
-#formlist {
+#formlist, #formlist-action,#formlist-sport,#formlist-adventure {
     max-width: 100%;
     overflow: auto;
     margin: 30px 0;
     scroll-behavior: smooth;
 }
 
-#formlist::-webkit-scrollbar {
+#formlist::-webkit-scrollbar,
+#formlist-action::-webkit-scrollbar,
+#formlist-sport::-webkit-scrollbar,
+#formlist-adventure::-webkit-scrollbar{
     display: none;
 }
 
@@ -263,5 +268,101 @@ footer {
 	}
 }
 
+.modals {
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
 
-  
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% -32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+header.modal-header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.modal-header h2 {
+    font-size: 50px;     
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: rgb(232, 129, 109);
+    color: #eee;
+}
+
+.modals.open {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#game-adventure .item,
+#game-sport .item,
+#game-action .item,
+#game-free .item {
+    width: 25%;
+    margin-right: 50px;
+    border: none;
+    background-color: rgb(182, 184, 186);
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+
+
+.modal-body-1 {
+    display: flex;
+    margin: 0 20px;
+}
+
+.modal-table-1 {
+    margin-bottom: 15px;
+}
+
+.description-game {
+    font-size: 20px;
+}
+.modal-tabel-2 {
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+

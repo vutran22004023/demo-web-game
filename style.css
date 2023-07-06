@@ -102,8 +102,11 @@ body{
     transition: .5s;
 }
 .navigation .buttonLogin:hover {
-    background: #fff;
-    color: #162938;
+    background: #ff0303;
+    color: #f8f8f8;
+}
+.navigation .buttonLogin a {
+    margin: 0 5px;
 }
 
 

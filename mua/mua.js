@@ -121,9 +121,9 @@ function initApp  () {
         newDiv.classList.add('item');
         newDiv.innerHTML = `
             <img style= " border-radius: 20px; width:  250px;" src ="${value.image}"/>
-            <div class= "title"> ${value.name}</div>
+            <div style= " margin-top: 10px;" class= "title"> ${value.name}</div>
             <div class="price"> ${value.price.toLocaleString()}đ</div>
-            <button onclick= "addToCard(${key})">Add to Card</button>
+            <button style= " border-radius: 10px; padding: 20px" onclick= "addToCard(${key})">Add to Card</button>
         `;
         list.appendChild(newDiv);
     });

@@ -171,7 +171,7 @@ function initGamefree  () {
             <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
             <div class="card-body">
                 <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
-                <button onclick= "addToCard(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+                <button onclick= "addToCard(${key})" class="btn btn-primary js-detail" style= "padding: 20px 70px">Chi Tiết</button>
             </div>
         </div>
         `;
@@ -191,7 +191,7 @@ function initGameAction  () {
             <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
             <div class="card-body">
                 <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
-                <button onclick= "addToCard1(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+                <button onclick= "addToCard1(${key})" class="btn btn-primary js-detail" style= "padding: 20px 70px">Chi Tiết</button>
             </div>
         </div>
         `;
@@ -211,7 +211,7 @@ function initGameSport  () {
             <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
             <div class="card-body">
                 <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
-                <button onclick= "addToCard2(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+                <button onclick= "addToCard2(${key})" class="btn btn-primary js-detail" style= "padding: 20px 70px">Chi Tiết</button>
             </div>
         </div>
         `;
@@ -231,7 +231,7 @@ function initGameAdventure  () {
             <img class="card-img-top" src="${value.image}" alt="Card image cap" style= " border-radius: 20px; width:  250px;">
             <div class="card-body">
                 <h5 class="card-title" style= "margin: 20px 0">${value.name}</h5>
-                <button onclick= "addToCard3(${key})" class="btn btn-primary js-detail" style= "padding: 20px">Go somewhere</button>
+                <button onclick= "addToCard3(${key})" class="btn btn-primary js-detail" style= "padding: 20px 70px">Chi Tiết</button>
             </div>
         </div>
         `;
@@ -301,7 +301,7 @@ function reloadCard(){
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px; padding: 0 10px;" class="description-game">
               ${value.content}
             </div>
           </div>
@@ -327,7 +327,7 @@ function reloadCard1(){
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px; padding: 0 10px;" class="description-game">
                 ${value.content}
             </div>
           </div>
@@ -353,7 +353,7 @@ function reloadCard2(){
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px; padding: 0 10px;" class="description-game">
                 ${value.content}
             </div>
           </div>
@@ -379,7 +379,7 @@ function reloadCard3(){
 
           <div class="modal-tabel-2">
             <h1 style=" margin-bottom: 30px;" class="name-game">${value.name}</h1>
-            <div style=" overflow-x: hidden; height: 300px;width: 550px; padding: 0 10px;" class="description-game">
+            <div style=" overflow-x: hidden; height: 300px; padding: 0 10px;" class="description-game">
                 ${value.content}
             </div>
           </div>

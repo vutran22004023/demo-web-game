@@ -130,7 +130,7 @@ body{
     
 }
 #content .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 50px;
     letter-spacing: 4px;
     margin-bottom: 40px;
@@ -204,6 +204,7 @@ body{
     overflow: auto;
     margin: 30px 0;
     scroll-behavior: smooth;
+    
 }
 
 #formlist::-webkit-scrollbar,
@@ -283,12 +284,13 @@ footer {
 }
 
 .modal-container {
-    background: #fff;
+    background: #e0dede;
     width: 900px;
     max-width: calc(100% -32px);
     min-height: 200px;
     position: relative;
     animation: modalFadeIn ease 0.5s;
+    border-radius: 8px;
 }
 
 header.modal-header {
@@ -342,7 +344,9 @@ header.modal-header h2 {
     border-radius: 20px;
 }
 
-
+.price {
+    color: #ff0000;
+}
 .modal-body-1 {
     display: flex;
     margin: 0 20px;
@@ -354,6 +358,8 @@ header.modal-header h2 {
 
 .description-game {
     font-size: 20px;
+    width: 600px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .modal-tabel-2 {
     border: none;

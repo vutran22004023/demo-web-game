@@ -55,8 +55,9 @@ body {
     left: 100%;
     width: 500px;
     background-color: #453E3B;
-    height: 100vh;
+    height: 91vh;
     transition: 0.5s;
+    margin-top: 75px;
 }
 
 .card h1 {
@@ -110,10 +111,13 @@ body {
 
 .list .item {
     text-align: center;
-    background-color: #DCE0E1;
-    padding: 20px;
-    box-shadow: 0 50px 50px #757676;
-    letter-spacing: 1px;
+    padding: 30px;
+    background-image: 
+            linear-gradient(
+            to bottom right,
+            rgba(224, 78, 78, 0.244),rgb(11, 11, 11)
+            ); 
+    border-radius: 8px;        
 }
 
 .list .item img {
@@ -129,10 +133,14 @@ body {
 }
 
 .list .item button {
-    background-color: #1C1F25;
+    background-color: #064ad1;
     color: #fff;
     padding: 10px;
     width: 100%;
+}
+
+.list .item button:hover {
+    opacity: 0.8;
 }
 
 .listCard li{

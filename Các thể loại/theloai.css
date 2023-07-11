@@ -1,0 +1,53 @@
+body {
+    background-color: #1f1f1f;
+}
+
+#game-adventure .item,
+#game-sport .item,
+#game-action .item,
+#game-free .item {
+    
+    width: 25%;
+    margin-right: 50px;
+    border: none;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background-image: 
+            linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.244), #1f1f1f
+            );
+    padding-bottom: 20px;
+    border: 0.01px solid aliceblue;
+    overflow:none;
+}
+
+#game-adventure .item,
+#game-sport .item,
+#game-action .item,
+#game-free .item {
+    width: 300px;
+    margin-right: 50px;
+    border: none;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background-image: 
+            linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.244), #1f1f1f
+            );
+    padding-bottom: 20px;
+    border: 0.01px solid aliceblue;
+    text-align: center;
+}
+.card-title {
+    color: aliceblue;
+}
+
+#formlist, #formlist-action,#formlist-sport,#formlist-adventure {
+    max-width: 100%;
+    overflow:visible;
+    margin: 30px 0;
+    scroll-behavior: smooth;
+    
+}

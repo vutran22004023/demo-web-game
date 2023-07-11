@@ -503,4 +503,3 @@ function reloadCard3(){
         }
     })
 }
-

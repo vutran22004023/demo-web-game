@@ -394,6 +394,13 @@ header.modal-header h2 {
     border: none;
 }
 
+.section-text-right a {
+    color: #c49250;
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+
 
 
 

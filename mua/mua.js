@@ -17,13 +17,13 @@ closeShopping.addEventListener('click', () => {
 var products = [
     {											
         id: 1 ,										
-        name: "Summoners War: Chronicles",																				
+        name: "Chronicles",																				
         price :200000,										
         image:"https://cdn.akamai.steamstatic.com/steam/apps/2167580/hero_capsule.jpg?t=1684992880"										                                 
     },											
     {											
         id: 2 ,										
-        name: "Counter-Strike: Global Offensive",																				
+        name: "Global Offensive",																				
         price :200000,										
         image:"https://cdn.akamai.steamstatic.com/steam/apps/730/hero_capsule.jpg?t=1683566799"										
     },											
@@ -77,7 +77,7 @@ var products = [
     },											
     {											
         id: 11 ,										
-        name: "Skater XL - The Ultimate Skateboarding",																				
+        name: "The Ultimate Skateboarding",																				
         price :120000,										
         image:"https://cdn.akamai.steamstatic.com/steam/apps/962730/hero_capsule.jpg?t=1677776088"										                                      
     },											
@@ -110,6 +110,120 @@ var products = [
         name: "The Elder Scrolls V",																				
         price :500000,										
         image:"https://cdn.akamai.steamstatic.com/steam/apps/306130/hero_capsule.jpg?t=1685974187"										                                   
+    },
+    {											
+        id: 17 ,										
+        name: "Project Zomboid",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/108600/hero_capsule.jpg?t=1679306018"										                                   
+    },
+    {											
+        id: 18 ,										
+        name: " Survivor",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1774580/hero_capsule.jpg?t=1689016715"										                                   
+    },
+    {											
+        id: 19 ,										
+        name: "Extermination",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1268750/hero_capsule.jpg?t=1688071713"										                                   
+    },
+    {											
+        id: 20 ,										
+        name: "DAVE THE DIVER",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1868140/hero_capsule.jpg?t=1688619744"										                                   
+    },
+    {											
+        id: 21 ,										
+        name: "OCTOPATH TRAVELER II",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1971650/hero_capsule.jpg?t=1688650936"										                                   
+    },
+    {											
+        id: 22 ,										
+        name: "The Old Republic",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1286830/hero_capsule.jpg?t=1680085446"										                                   
+    },
+    {											
+        id: 23 ,										
+        name: "EA SPORTS™ F1® 23",																				
+        price :"free to play",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/2108330/hero_capsule.jpg?t=1688987889"										                                   
+    },
+    {											
+        id: 24 ,										
+        name: "Super Mega Baseball™ 4",																				
+        price :"free to play",										
+        image:" https://cdn.akamai.steamstatic.com/steam/apps/1487210/hero_capsule.jpg?t=1687275332"										                                   
+    },	
+    {											
+        id: 25 ,										
+        name: "MONSTER HUNTER RISE",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1446780/hero_capsule.jpg?t=1687140511"										                                   
+    },
+    {											
+        id: 26 ,										
+        name: "Dead Space",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1693980/hero_capsule.jpg?t=1684172906"										                                   
+    },
+    {											
+        id: 27 ,										
+        name: "Destiny 2: Lightfall",																				
+        price :"200000",										
+        image:" https://cdn.akamai.steamstatic.com/steam/apps/1945340/hero_capsule.jpg?t=1678813639"										                                   
+    },
+    {											
+        id: 28 ,										
+        name: "Spider-Man Remastered",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1817070/hero_capsule.jpg?t=1673999865"										                                   
+    },
+    {											
+        id: 29 ,										
+        name: " Civilization® VI ",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/289070/hero_capsule.jpg?t=1680898825"										                                   
+    },
+    {											
+        id: 30 ,										
+        name: "EA SPORTS™ PGA TOUR™ ",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1677350/hero_capsule.jpg?t=1687930078"										                                   
+    },
+    {											
+        id: 31 ,										
+        name: "Doom: Eternal",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/782330/hero_capsule.jpg?t=1661971606"										                                   
+    },
+    {											
+        id: 32 ,										
+        name: "NFS Unbound",																				
+        price :"200000",										
+        image:" https://cdn.akamai.steamstatic.com/steam/apps/1846380/hero_capsule.jpg?t=1687458828"										                                   
+    },
+    {											
+        id: 33 ,										
+        name: "Fallout 76",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1151340/hero_capsule.jpg?t=1687281091"										                                   
+    },
+    {											
+        id: 34 ,										
+        name: "Halo Infinite",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/1240440/hero_capsule.jpg?t=1687293863"										                                   
+    },
+    {											
+        id: 35 ,										
+        name: "Halo : The Master Chief’s",																				
+        price :"200000",										
+        image:"https://cdn.akamai.steamstatic.com/steam/apps/976730/hero_capsule.jpg?t=1670458602"										                                   
     },
 ]
 

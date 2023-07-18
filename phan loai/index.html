@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/phan loai/phanloai.js">
     <link rel="stylesheet" href="/phan loai/phanloai.css">
+    <link rel="stylesheet" href="/responsive.css">
 </head>
 <body onload="listProduct()">
     <div class="web">
@@ -25,7 +26,12 @@
                       <li><a href="/phan loai/index.html">Thể Loại</a></li>
                       <li><a href="/mua/mua.html">Mua game</a></li>
                   </ul>
-                  <button class="buttonLogin"><a href="/login/login.html">Login</a></button>
+                  <div style="display: flex;">
+                    <button class="buttonLogin"><a href="/login/login.html">Login</a></button>
+                    <div id="mobile-menu" class="mobile-menu-btn">
+                      <i style="margin-top: 14px;" class="mobile-menu-icon fa-solid fa-bars"></i>
+                    </div>
+                  </div>
                 </nav>
             </div>
         </header>
@@ -226,7 +232,20 @@
     <script src="/script.js"></script>
     <script src="./phanloai.js"></script>
 
+    <script>
+      var header_Element = document.querySelector('.navigation');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var headerHeight = header_Element.clientHeight;
 
+      mobileMenu.onclick = function () {
+        var isClose = header_Element.clientHeight === headerHeight;
+          if(isClose) {
+            header_Element.style.height = 'auto';
+          }else {
+            header_Element.style.height = null;
+          }
+      }
+    </script>
     <script>
       function showSuccessToast() {
         toast({

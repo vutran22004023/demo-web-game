@@ -246,3 +246,7 @@ button{
 button:hover{
     background-color: #0e4bf1;
 }
+
+.single-box img {
+    width: 200px;
+}

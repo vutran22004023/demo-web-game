@@ -8,6 +8,7 @@ body{
     color: #fff;
 }
 
+
 .carousel-caption h2 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 80px;
@@ -187,6 +188,7 @@ body{
 }
 
 .block-content {
+    display: flex;
     margin-bottom: 20px;
     padding: 5px;
 }
@@ -290,7 +292,7 @@ footer {
 }
 @media (max-width: 767px) {
 	.single-box {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -376,6 +378,9 @@ header.modal-header h2 {
             );
     padding-bottom: 20px;
     border: 0.01px solid aliceblue;
+}
+.single-box img {
+    width: 200px;
 }
 
 .price {

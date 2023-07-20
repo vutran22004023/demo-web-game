@@ -250,3 +250,13 @@ button:hover{
 .single-box img {
     width: 200px;
 }
+
+
+.input-group {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.form-outline input {
+    width: 300px;
+}

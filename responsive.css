@@ -123,4 +123,20 @@
     .single-box1 {
         display: none;
     }
+
+    /* phan loai */
+
+    .carousel-item img {
+        height: 500px;
+    }
+
+    /* mua */
+    .list {
+        grid-template-columns: repeat(2, 300px);
+        
+    }
+    .container-item {
+        display: flex;
+        justify-content: space-between;
+    }
 }

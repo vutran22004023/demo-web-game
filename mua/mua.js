@@ -17,10 +17,11 @@ close.addEventListener('click', function (){
     container.style.transform = 'translateX(0)';
 })
 
-    
+
 let products = null;
 // get data from file json
-fetch('/product.json')
+var courseAPI = 'http://localhost:3000/game';
+fetch(courseAPI)
     .then(response => response.json())
     .then(data => {
         products = data;
@@ -53,7 +54,7 @@ function addDataToHTML(){
 //use cookie so the cart doesn't get lost on refresh page
 
 
-let listCart = []; 
+let listCart = [];
 
 function checkCart(){
     var cookieValue = document.cookie
@@ -67,9 +68,7 @@ function checkCart(){
 }
 checkCart();
 function addCart($idProduct){
-    localStorage.setItem('students', JSON.stringify(listCart));
-    let students =  JSON.parse(localStorage.getItem('students'))
-    let productsCopy = JSON.parse(JSON.stringify(products));    
+    let productsCopy = JSON.parse(JSON.stringify(products));
     //// If this product is not in the cart
     if(!listCart[$idProduct]) 
     {
@@ -80,7 +79,6 @@ function addCart($idProduct){
         //I just increased the quantity
         listCart[$idProduct].quantity++;
     }
-    
     document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
 
     addCartToHTML();

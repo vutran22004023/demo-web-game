@@ -73,6 +73,7 @@ function addCart($idProduct){
     let productsCopy = JSON.parse(JSON.stringify(products));
     localStorage.setItem('products', JSON.stringify(listCart))
     let getProduct = JSON.parse (localStorage.getItem('products'));
+    getProduct = listCart ;
     console.log(getProduct)
     //// If this product is not in the cart
     if(!listCart[$idProduct]) 

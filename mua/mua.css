@@ -90,9 +90,9 @@ header .totalQuantity{
     position: fixed;
     width: 500px;
     max-width: 80vw;
-    height: 93vh;
+    height: 90.75vh;
     background-color: #0E0F11;
-    top: 56px;
+    top: 75px;
     right: -100%;
     display: grid;
     grid-template-rows: 50px 1fr 50px;
@@ -103,6 +103,7 @@ header .totalQuantity{
 .cart .buttons .checkout{
     background-color: #E8BC0E;
     color: #000;
+    
 }
 .cart h2{
     color: #E8BC0E;
@@ -152,6 +153,7 @@ header .totalQuantity{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
+    
 }
 .cart .buttons div{
     background-color: #000;

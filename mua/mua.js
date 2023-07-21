@@ -25,11 +25,11 @@ fetch(courseAPI)
     .then(response => response.json())
     .then(data => {
         products = data;
-        addDataToHTML();
+        addDataToHTML(products);
 })
 
 //show datas product in list 
-function addDataToHTML(){
+function addDataToHTML(array){
     // remove datas default from HTML
     let listProductHTML = document.querySelector('.listProduct');
     listProductHTML.innerHTML = '';
@@ -37,7 +37,7 @@ function addDataToHTML(){
     // add new datas
     if(products != null) // if has data
     {
-        products.forEach(product => {
+        array.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.classList.add('item');
             newProduct.innerHTML = 
@@ -58,10 +58,12 @@ let listCart = [];
 
 function checkCart(){
     var cookieValue = document.cookie
+    
     .split('; ')
     .find(row => row.startsWith('listCart='));
     if(cookieValue){
         listCart = JSON.parse(cookieValue.split('=')[1]);
+       
     }else{
         listCart = [];
     }
@@ -69,6 +71,9 @@ function checkCart(){
 checkCart();
 function addCart($idProduct){
     let productsCopy = JSON.parse(JSON.stringify(products));
+    localStorage.setItem('products', JSON.stringify(listCart))
+    let getProduct = JSON.parse (localStorage.getItem('products'));
+    console.log(getProduct)
     //// If this product is not in the cart
     if(!listCart[$idProduct]) 
     {
@@ -84,6 +89,7 @@ function addCart($idProduct){
     addCartToHTML();
 }
 addCartToHTML();
+
 function addCartToHTML(){
     // clear data default
     let listCartHTML = document.querySelector('.listCart');
@@ -136,4 +142,12 @@ function changeQuantity($idProduct, $type){
     document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
     // reload html view cart
     addCartToHTML();
+}
+
+function searchProduct  () {
+    let  valueSearchInput = document.getElementById('form1').value;
+    let userSearch = products.filter(value => {
+        return value.name.toUpperCase().includes(valueSearchInput.toUpperCase())
+    })
+    addDataToHTML(userSearch);
 }

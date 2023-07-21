@@ -131,12 +131,10 @@
     }
 
     /* mua */
-    .list {
-        grid-template-columns: repeat(2, 300px);
-        
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
     }
-    .container-item {
-        display: flex;
-        justify-content: space-between;
+    .cart {
+        width: 300px;
     }
 }

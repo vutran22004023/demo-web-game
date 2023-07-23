@@ -138,5 +138,40 @@
     }
 }
 
-/* @media (max-width: 740px) { */
-
+/* tablet (ipad mini) */
+@media (min-width: 481px) and (max-width: 769px){
+    .navigation-item img{
+        height: 30px;
+        width: 200px;
+        margin-top: 10px;
+    }
+    .navigation-item li{
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .carousel-item{
+        height: 500px;
+    }
+    .content-section{
+        border: none;
+        margin: 30px 60px 30px 60px;
+    }
+    .section-header{
+        display: flex; justify-content: space-between;
+    }
+    .formlist{
+        border: none;
+    }
+    #game-free, #game-action, #game-sport, #game-adventure{
+        display: flex;width: max-content;
+    }
+    #content{
+        margin-top: 50px;
+    }
+    .section-text-left{
+        font-size: 40px;
+    }
+    .directions .prev{
+        
+    }
+}

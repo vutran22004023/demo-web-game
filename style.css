@@ -48,6 +48,10 @@ body{
 .navigation-item  {
     display: inline-flex;
 }
+.navigation-item img {
+    width: 300px;
+    margin-top: 5px;
+}
 
 .navigation-item li  {
     margin-top: 15px;
@@ -182,6 +186,10 @@ body{
 .whats-happening__hero-content {
     position: absolute;
     bottom: 0;
+}
+
+.whats-happening__hero-content-text {
+    width: 400px;
 }
 .item:hover {
     border: 0.001px solid #8f8d8d;

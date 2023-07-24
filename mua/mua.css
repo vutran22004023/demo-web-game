@@ -57,13 +57,19 @@ header .totalQuantity{
 }
 .listProduct .item{
     position: relative;
+    background-image: linear-gradient( to bottom right, rgba(255, 255, 255, 0.244), #1f1f1f );
+    border-radius: 20px;
 }
 .listProduct .item h2{
     font-weight: 700;
     font-size: x-large;
+    text-align: center;
+    margin-top: 20px;
 }
 .listProduct .item .price{
     font-size: x-large;
+    margin-left: 50px;
+    padding-bottom: 20px;
 }
 
 .listProduct .item button{

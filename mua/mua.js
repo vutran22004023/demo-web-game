@@ -3,6 +3,8 @@ let cart = document.querySelector('.cart');
 let container = document.querySelector('.container');
 let close = document.querySelector('.close');
 
+
+
 iconCart.addEventListener('click', function(){
     if(cart.style.right == '-100%'){
         cart.style.right = '0';
@@ -43,7 +45,7 @@ function addDataToHTML(array){
             newProduct.innerHTML = 
             `<img src="${product.image}" alt="">
             <h2>${product.name}</h2>
-            <div class="price">$${product.price}</div>
+            <div class="price">Giá: ${product.price}đ</div>
             <button onclick="addCart(${product.id})">Add To Cart</button>`;
 
             listProductHTML.appendChild(newProduct);
@@ -60,22 +62,21 @@ function checkCart(){
     var cookieValue = document.cookie
     
     .split('; ')
-    .find(row => row.startsWith('listCart='));
+    .find(row => row.startsWith('listCarts='));
+
+    console.log(cookieValue);
     if(cookieValue){
         listCart = JSON.parse(cookieValue.split('=')[1]);
-       
     }else{
         listCart = [];
     }
 }
 checkCart();
-function addCart($idProduct){
+function addCart($idProduct){   
     let productsCopy = JSON.parse(JSON.stringify(products));
-    localStorage.setItem('products', JSON.stringify(listCart))
-    let getProduct = JSON.parse (localStorage.getItem('products'));
-    getProduct = listCart ;
-    console.log(getProduct)
-    //// If this product is not in the cart
+    // localStorage.setItem('products', JSON.stringify(listCart))
+    // let getProduct = JSON.parse (localStorage.getItem('products'));
+    // If this product is not in the cart
     if(!listCart[$idProduct]) 
     {
         listCart[$idProduct] = productsCopy.filter(product => product.id == $idProduct)[0];
@@ -85,11 +86,10 @@ function addCart($idProduct){
         //I just increased the quantity
         listCart[$idProduct].quantity++;
     }
-    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+    document.cookie = "listCarts=" + JSON.stringify(listCart)  + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;" ;
 
     addCartToHTML();
 }
-addCartToHTML();
 
 function addCartToHTML(){
     // clear data default
@@ -122,6 +122,8 @@ function addCartToHTML(){
     }
     totalHTML.innerText = totalQuantity;
 }
+
+
 function changeQuantity($idProduct, $type){
     switch ($type) {
         case '+':
@@ -140,7 +142,7 @@ function changeQuantity($idProduct, $type){
             break;
     }
     // save new data in cookie
-    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+    document.cookie = "listCarts=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
     // reload html view cart
     addCartToHTML();
 }
@@ -148,7 +150,7 @@ function changeQuantity($idProduct, $type){
 function searchProduct  () {
     let  valueSearchInput = document.getElementById('form1').value;
     let userSearch = products.filter(value => {
-        return value.name.toUpperCase().includes(valueSearchInput.toUpperCase())
+        return value.name.toUpperCase().includes(valueSearchInput.toUpperCase());
     })
     addDataToHTML(userSearch);
 }
